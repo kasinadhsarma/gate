@@ -1,0 +1,1 @@
+### here full of gate 2026 operation will started full learning of computer science and ai(data science)
