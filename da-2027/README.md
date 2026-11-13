@@ -12,6 +12,6 @@ Each syllabus section is a LaTeX-built PDF told through two friends, Ramu (asks 
 | 6 | Machine Learning | [pdf](6-machine-learning/GATE_DA_2027_Machine_Learning_Ramu_Somu.pdf) |
 | 7 | Artificial Intelligence | [pdf](7-artificial-intelligence/GATE_DA_2027_Artificial_Intelligence_Ramu_Somu.pdf) |
 
-| 🎬 | Math + DSA story film (12.2 min: arithmetic, number bases, GCD/LCM, primes, probability, DSA) | [mp4](film/Operation_Gate_The_Night_Library_Math_DSA_Film.mp4) |
+| 🎬 | Math + Python + DSA story film (16.7 min: arithmetic, number bases, GCD/LCM, primes, probability, Python workshop, DSA) | [mp4](film/Operation_Gate_The_Night_Library_Math_Python_DSA_Film.mp4) |
 
 Each folder also has the `.tex` source (`latexmk -pdf file.tex`). `archive/earlier-editions` holds superseded versions. `4-programming-dsa/verification` has the scripts used to check every answer. Past-question stems are paraphrased from the official papers; answers match the official keys.

@@ -455,9 +455,11 @@ def d_mb(d,t,sc):
         ctext(d,(900,345),"binary add:  1101 + 1 = 1110",F(18,True,True),PUR,"lm")
         ctext(d,(900,385),"two's complement of 5:",F(18),GOLD,"lm");ctext(d,(900,420),"00000101 → flip → 11111010",F(16,True,True),WHITE,"lm");ctext(d,(900,450),"+1 → 11111011  (= −5)",F(18,True,True),RED,"lm")
     banner(d,ts[7],t,"BONUS TWIST — 0.1 has no finite binary form",RED,115)
-SCENES=[("title",d_title,""),("m1",d_m1,"Basement · Arithmetic"),("mb",d_mb,"Basement · Number Bases"),("m2",d_m2,"Basement · GCD, HCF, LCM"),("m3",d_m3,"Basement · Primes and Modular Arithmetic"),("m4",d_m4,"Basement · Counting and Probability"),("m5",d_m5,"Basement · Math inside DSA"),("s1",d_s1,"Chapter 1 · Linear Search"),("s2",d_s2,"Chapter 2 · Binary Search"),("s3",d_s3,"Chapter 3 · Merge Sort"),("s4",d_s4,"Chapter 4 · Hashing"),("s5",d_s5,"Chapter 5 · Python Memory"),("s6",d_s6,"Chapter 6 · Graphs: BFS and DFS"),("s7",d_s7,"Chapter 7 · Topological Sort"),("s8",d_s8,"Finale · Recursion and Memoisation"),("end",d_end,"")]
+SCENES=[("title",d_title,""),("m1",d_m1,"Basement · Arithmetic"),("mb",d_mb,"Basement · Number Bases"),("m2",d_m2,"Basement · GCD, HCF, LCM"),("m3",d_m3,"Basement · Primes and Modular Arithmetic"),("m4",d_m4,"Basement · Counting and Probability"),("m5",d_m5,"Basement · Math inside DSA"),("p1",None,"Python · Variables, Types, References"),("p2",None,"Python · Collections"),("p3",None,"Python · Loops and Comprehensions"),("p4",None,"Python · Functions, Scope, Closures"),("p5",None,"Python · Classes, Exceptions, Generators"),("s1",d_s1,"Chapter 1 · Linear Search"),("s2",d_s2,"Chapter 2 · Binary Search"),("s3",d_s3,"Chapter 3 · Merge Sort"),("s4",d_s4,"Chapter 4 · Hashing"),("s5",d_s5,"Chapter 5 · Python Memory"),("s6",d_s6,"Chapter 6 · Graphs: BFS and DFS"),("s7",d_s7,"Chapter 7 · Topological Sort"),("s8",d_s8,"Finale · Recursion and Memoisation"),("end",d_end,"")]
 def render(key,out):
     sc=Sc(key);fn=[x for x in SCENES if x[0]==key][0]
+    if fn[1] is None:
+        import pyscenes;fn=(key,getattr(pyscenes,'d_'+key),fn[2])
     n=int(sc.dur*FPS)
     p=subprocess.Popen(["ffmpeg","-y","-loglevel","error","-f","rawvideo","-pix_fmt","rgb24","-s",f"{W}x{H}","-r",str(FPS),"-i","-","-vf","fade=t=in:st=0:d=0.4,fade=t=out:st=%.2f:d=0.4"%(sc.dur-0.4),"-c:v","libx264","-crf","20","-preset","veryfast","-pix_fmt","yuv420p",out],stdin=subprocess.PIPE)
     for i in range(n):
@@ -467,6 +469,8 @@ if __name__=="__main__":
     if sys.argv[1]=="test":
         os.makedirs("tst",exist_ok=True)
         for key,fn_,ch in SCENES:
+            if fn_ is None:
+                import pyscenes;fn_=getattr(pyscenes,'d_'+key)
             sc=Sc(key)
             for fr in (0.35,0.62,0.92):
                 frame(sc,sc.dur*fr,fn_,ch).save(f"tst/{key}_{int(fr*100)}.png")

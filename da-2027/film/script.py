@@ -125,3 +125,46 @@ SCENES["mb"]=[
 ("S","Adding in binary follows the school carry rule. One one zero one plus one carries to one one one zero. Negative numbers use two's complement: flip the bits and add one. Minus five, in eight bits, is one one one one one zero one one."),
 ("N","Bonus twist. Zero point one has no finite binary form, so zero point one plus zero point two is not exactly zero point three."),
 ]
+
+SCENES["title"]=[("N","Operation Gate. The Night Library. A film about mathematics, Python, data structures and algorithms, in seventeen twists.")]
+SCENES["p1"]=[
+("N","Welcome to the Python workshop. Every algorithm in this film is written in Python, so let us learn the language properly, from the first line."),
+("R","Somu, what is a variable? Is it a box that holds a value?"),
+("S","Not quite. A variable is a name tag stuck on an object. Python has no declarations; the object carries its type. Seven is an int, three point five is a float, gate in quotes is a str, True is a bool, and None means nothing here."),
+("S","Tags can move. Write b equals a, and you have not copied the list. You stuck a second tag on the same list. Append through b, and a sees it too. A fresh list with the same items is equal, but it is not the same object."),
+("R","So is checks identity, and equals equals checks content?"),
+("S","Exactly. Numbers, strings and tuples are immutable. Lists, dicts and sets are mutable. Remember that split, and half your bugs disappear."),
+("N","Python twist one. A name is a label on an object, not a box."),
+]
+SCENES["p2"]=[
+("R","Python has four built in containers, Somu. How do I choose?"),
+("S","A list is an ordered, changeable sequence. Append to the end, sort in place, and slice with start, stop and step. A step of minus one reverses it."),
+("S","A tuple is a list that cannot change. It is perfect for fixed records, and it can be unpacked into names. Try to assign into it, and Python refuses."),
+("S","A dict maps keys to values, with constant average lookup. Counting words is the classic job: get the old count, add one."),
+("S","A set keeps unique items. Membership tests are fast, and union and intersection are one symbol each."),
+("N","Python twist two. Pick the container by the question you will ask it: position, fixed record, lookup by key, or membership."),
+]
+SCENES["p3"]=[
+("R","How does Python decide what to repeat, Somu?"),
+("S","A for loop walks over anything iterable. Range of one to six gives one to five, and continue skips the even ones. Indentation, not braces, marks the body."),
+("S","A loop can have an else branch. It runs only if the loop finished without hitting break. That is the neat way to say: no divisor found, so the number is prime."),
+("S","A while loop repeats until its condition fails. Halving a hundred until it reaches one takes six steps, which is the log n pattern again."),
+("S","And a comprehension builds a list in one line: the squares of the even numbers below six. Zip walks two sequences together."),
+("N","Python twist three. The else of a loop belongs to the loop, not to the if."),
+]
+SCENES["p4"]=[
+("R","Now functions. What can I pass into them?"),
+("S","Parameters can have defaults, so area of five uses height two, and area of five and three overrides it. Star args collects extra positional values into a tuple, and double star collects keywords into a dict."),
+("S","Where does Python look for a name? Local first, then the enclosing function, then global, then built in. This is the L E G B rule. Assigning inside a function makes a new local name, so the global ten stays ten."),
+("S","A closure remembers its enclosing variables. The counter function returns inc, and inc keeps its own count alive with nonlocal. Three calls give three. A second counter starts again at one."),
+("S","Lambda is a tiny anonymous function. Sorting words by length uses one as the key."),
+("N","Python twist four. Functions are objects too. They can be passed, returned and remembered."),
+]
+SCENES["p5"]=[
+("R","Last stop in the workshop. How do I build my own data structure?"),
+("S","With a class. The init method sets up the object, and self is the object itself. Here a stack wraps a list: push appends, pop removes the last item. Last in, first out."),
+("S","Things go wrong, so we use exceptions. Put risky code in try, handle the error in except, and finally always runs, even after an error."),
+("S","Finally, a generator. The yield keyword produces one value at a time and pauses. Summing the squares below a million with a generator uses almost no memory, because no list is ever built."),
+("N","Python twist five. Be lazy. Compute values only when someone asks for them."),
+("R","Now I can read every code question, and write my own."),
+]
