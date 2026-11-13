@@ -104,7 +104,7 @@ def walk(d,sc,t,segs,x=24,y=150,w=770,fs=18,lh=24):
     prev=st[k-1][1] if k>0 else {}
     vx=x+w+16;rbox(d,(vx,y,1250,y+34+max(1,len(loc))*30),(20,24,50),TEAL,10,2);ctext(d,(vx+14,y+17),"variables",F(16),TEAL,"lm")
     for j,(n,v) in enumerate(loc.items()):
-        ch=prev.get(n)!=v;ctext(d,(vx+14,y+48+j*30),f"{n} = {v}",F(18,True,True),GOLD if ch else WHITE,"lm")
+        ch=prev.get(n)!=v;ctext(d,(vx+14,y+48+j*30),(f"{n} = {v}" if len(f"{n} = {v}")<=36 else f"{n} = {v}"[:35]+"…"),F(18,True,True),GOLD if ch else WHITE,"lm")
     oy=y+h+10;ol=[q for q in out.rstrip("\n").split("\n") if q][-3:]
     rbox(d,(x,oy,x+w,oy+len(ol)*lh+14 if ol else oy+lh+14),(40,36,14),(200,150,60),8,2)
     ctext(d,(x+10,oy+12),"output" if not ol else "",F(14),(200,150,60),"lm")
