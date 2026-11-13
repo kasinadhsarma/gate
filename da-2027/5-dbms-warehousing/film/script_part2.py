@@ -1,0 +1,20 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. The Vault of Tables, part two. The missing piece: relational algebra."),
+(N,"Every operator is run in plain Python and cross checked against real S Q L.")],
+"ra":[(N,"Room one. Relational algebra."),
+(R,"SQL is how I query. What is relational algebra for?"),
+(S,"It is the mathematics under SQL. A few operators, each taking tables and giving a table. Select, written sigma, picks rows. Project, written pi, picks columns. Join combines tables on matching keys."),
+(S,"The code has a Student table and an Enrolled table. Selecting the computer science students returns S one and S three. The natural join has five rows."),
+(R,"What about the query: students enrolled in every course on a list?"),
+(S,"That is division. The code keeps the students whose set of courses contains both D B and M L. It returns S one and S three."),
+(S,"The same question in S Q L is a group by with a count distinct equal to two. It returns the same two students."),
+(N,"Twist one. Division is the all quantifier of relational algebra. In S Q L it is written with group by and having.")],
+"bag":[(N,"Room two. Sets versus bags."),
+(R,"Do the algebra and SQL always agree?"),
+(S,"Not quite. Relational algebra works on sets, so duplicates vanish. S Q L tables are bags, and keep duplicates."),
+(S,"Selecting the department column of three students gives c s, c s, e e in SQL. Adding distinct gives c s, e e. A set of those names has size two."),
+(N,"Twist two. Projection in algebra removes duplicates automatically. In S Q L you must write distinct.")],
+"end":[(N,"Relational algebra is covered, and with it every missing topic."),
+(N,"Operation Gate is complete. Good luck with GATE twenty twenty seven.")],
+}
