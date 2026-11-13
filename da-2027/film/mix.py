@@ -1,7 +1,7 @@
 import numpy as np, wave, json
 import film
 SR=22050
-order=["title","s1","s2","s3","s4","s5","s6","s7","s8","end"]
+order=["title","m1","m2","m3","m4","m5","s1","s2","s3","s4","s5","s6","s7","s8","end"]
 scs=[film.Sc(k) for k in order];tot=sum(int(s.dur*30)/30 for s in scs)
 N=int(tot*SR)+SR
 voice=np.zeros(N,dtype=np.float32);off=0.0

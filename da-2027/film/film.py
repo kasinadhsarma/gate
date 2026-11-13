@@ -82,7 +82,7 @@ def d_title(d,t,sc):
     a=ease(t/1.5)
     ctext(d,(W//2,250),"OPERATION  GATE",F(84),GOLD)
     ctext(d,(W//2,350),"The Night Library",F(50),WHITE)
-    if t>1.6:ctext(d,(W//2,430),"a data structures and algorithms film in seven twists",F(26,False),(170,180,215))
+    if t>1.6:ctext(d,(W//2,430),"a mathematics, data structures and algorithms film in twelve twists",F(26,False),(170,180,215))
     if t>3.2:ctext(d,(W//2,500),"GATE DA 2027  ·  Ramu & Somu",F(24),TEAL)
 def d_s1(d,t,sc):
     ts=sc.ts;n=28;x0=70;w=36;gap=4
@@ -106,7 +106,7 @@ def d_s1(d,t,sc):
         k=int(1_000_000*clamp((t-ts[1])/(ts[4]+2.0-ts[1]))**2.2)
         ctext(d,(W//2,505),f"shelves checked: {k:,}",F(40),TEAL)
     if t>ts[2]+3.5:ctext(d,(W//2,556),"linear search:  Θ(n)   ·   1 shelf/sec  =  11.6 days",F(28),RED)
-    banner(d,ts[4],t,"TWIST #1 — it was on the LAST shelf",GOLD,115)
+    banner(d,ts[4],t,"TWIST #6 — it was on the LAST shelf",GOLD,115)
 def bs_steps(a,tg):
     lo,hi=0,len(a)-1;S=[]
     while lo<=hi:
@@ -130,7 +130,7 @@ def d_s2(d,t,sc):
         if i==hi and step>=0:ctext(d,(x+w/2,236),"hi",F(14),PUR)
     if step>=0:ctext(d,(W//2,430),f"question {step+1}: is {A32[m]} {'the one!' if A32[m]==TG else ('too small → keep the right half' if A32[m]<TG else 'too big → keep the left half')}",F(28),TEAL)
     if t>ts[4]:ctext(d,(W//2,500),"1,048,576 shelves  →  only 20 questions",F(34),GOLD);ctext(d,(W//2,548),"binary search:  Θ(log n)",F(28),GRN)
-    banner(d,ts[5],t,"TWIST #2 — it only works while the order holds",PUR,115)
+    banner(d,ts[5],t,"TWIST #7 — it only works while the order holds",PUR,115)
 import random as _r
 _rr=_r.Random(11);ARR=list(range(1,17));_rr.shuffle(ARR)
 def msort_states(a):
@@ -165,7 +165,7 @@ def d_s3(d,t,sc):
     if t>ts[5]:
         rbox(d,(150,225,1130,300),(20,24,50),GOLD,12);ctext(d,(W//2,250),"bubble sort ≈ 5×10¹¹ comparisons    merge sort ≈ 2×10⁷",F(28),GOLD)
         ctext(d,(W//2,282),"n per level  ×  log n levels  =  Θ(n log n)",F(22,False),WHITE)
-    banner(d,ts[6],t,"TWIST #3 — no comparison sort beats n log n",TEAL,128)
+    banner(d,ts[6],t,"TWIST #8 — no comparison sort beats n log n",TEAL,128)
 def d_s4(d,t,sc):
     ts=sc.ts
     def hx(k):return (3*k)%10
@@ -197,7 +197,7 @@ def d_s4(d,t,sc):
         ctext(d,(W//2,520),(f"{k} → home slot {pr[0]}" if npro==1 else f"slot {pr[npro-2]} is busy → probe slot {pr[npro-1]}"),F(28),TEAL if npro==len(pr) else RED)
     if t>ts[5]:
         ctext(d,(W//2,570),"expected probes ≈ 1 / (1 − α)  →  α = 0.9  gives 10",F(28),GOLD)
-    banner(d,ts[5],t,"TWIST #4 — the fuller the table, the slower it gets",RED,115)
+    banner(d,ts[5],t,"TWIST #9 — the fuller the table, the slower it gets",RED,115)
 def d_s5(d,t,sc):
     ts=sc.ts
     code=["def append_to_lst(val, lst=[]):","    lst.append(val)","    return lst","","print(append_to_lst(1))","print(append_to_lst(2))","print(append_to_lst(3, []))"]
@@ -221,7 +221,7 @@ def d_s5(d,t,sc):
             d.text((90+i*200,y),o,font=F(34,True,True),fill=RED if i==1 else GRN)
     if c3:rbox(d,(1050,390,1230,445),(24,70,50),GRN,10,3);ctext(d,(1140,418),"fresh [3]",F(24,True,True),GRN)
     if c2:ctext(d,(W//2,552),"call 2 did not start from empty — the ghost remembered",F(24),RED)
-    banner(d,ts[4],t,"TWIST #5 — mutable defaults remember",PUR,125)
+    banner(d,ts[4],t,"TWIST #10 — mutable defaults remember",PUR,125)
 G6={0:(220,360),1:(380,260),2:(380,470),3:(580,250),4:(580,480),5:(780,360),6:(780,540)}
 E6=[(0,1),(0,2),(1,3),(2,4),(3,5),(4,5),(4,6)]
 DIST={0:0,1:1,2:1,3:2,4:2,5:3,6:3}
@@ -252,7 +252,7 @@ def d_s6(d,t,sc):
         ctext(d,(1030,300),"DFS dives deep:\n L → 1 → 3 → 5 → 4 → 2",F(24),PUR)
         if back:
             d.line([G6[2],G6[0]],fill=RED,width=8);ctext(d,(1000,440),"road 2 → L leads back\nto an OPEN junction!",F(22),RED)
-    banner(d,ts[5],t,"TWIST #6 — a back edge means a cycle",RED,115)
+    banner(d,ts[5],t,"TWIST #11 — a back edge means a cycle",RED,115)
 G7={0:(520,300),1:(980,300),2:(520,470),3:(760,470),4:(760,250),5:(300,380)}
 E7=[(5,2),(5,0),(4,0),(4,1),(2,3),(3,1)]
 TOP=[4,5,2,0,3,1]
@@ -271,7 +271,7 @@ def d_s7(d,t,sc):
         d.ellipse((x-27,y-27,x+27,y+27),fill=col,outline=WHITE,width=3);ctext(d,(x,y),str(n),F(24),(10,10,30) if n not in gone else (110,120,150))
         if n not in gone:ctext(d,(x,y-44),f"in:{ind[n]}",F(16),GRN if ind[n]==0 else (170,180,215))
     ctext(d,(W//2,590-52),"order:  "+"  ".join(str(x) for x in gone),F(34,True,True),GOLD)
-    banner(d,ts[3],t,"TWIST #7 — leftovers = a hidden cycle",PUR,128)
+    banner(d,ts[3],t,"TWIST #12 — leftovers = a hidden cycle",PUR,128)
 def mtree():
     nodes=[];cnt=[0]
     def build(n,dep):
@@ -308,15 +308,130 @@ def d_s8(d,t,sc):
     banner(d,ts[4],t,"FINAL TWIST — easy problems, asked too many times",GOLD,115)
 def d_end(d,t,sc):
     ts=sc.ts;ctext(d,(W//2,150),"the toolbox",F(40),GOLD)
-    cards=[("linear search","Θ(n)",RED),("binary search","Θ(log n)",GRN),("merge sort","Θ(n log n)",TEAL),("hash lookup","Θ(1) avg",PUR),("BFS / DFS","Θ(V+E)",GOLD)]
+    cards=[("linear search","Θ(n)",RED),("binary search","Θ(log n)",GRN),("merge sort","Θ(n log n)",TEAL),("hash lookup","Θ(1) avg",PUR),("Euclid GCD","Θ(log n)",GOLD),("sieve","Θ(n log log n)",GRN),("fast power","Θ(log e)",TEAL),("BFS / DFS","Θ(V+E)",PUR)]
     for i,(a,b,c) in enumerate(cards):
-        al=ease((t-ts[1]-i*0.6)/0.5) if t>ts[1] else 0
+        al=ease((t-ts[1]-i*0.45)/0.5) if t>ts[1] else 0
         if al<=0:continue
-        x=70+i*232;y=230-(1-al)*30
-        rbox(d,(x,y,x+215,y+170),(20,26,56),c,14,3);ctext(d,(x+107,y+55),a,F(22),WHITE);ctext(d,(x+107,y+115),b,F(30),c)
-    if t>ts[2]:ctext(d,(W//2,470),"GATE DA 2027  ·  Google prep",F(34),WHITE)
-    if t>ts[3]:ctext(d,(W//2,525),"github.com/kasinadhsarma/gate  →  da-2027/",F(24,False),TEAL)
-SCENES=[("title",d_title,""),("s1",d_s1,"Chapter 1 · Linear Search"),("s2",d_s2,"Chapter 2 · Binary Search"),("s3",d_s3,"Chapter 3 · Merge Sort"),("s4",d_s4,"Chapter 4 · Hashing"),("s5",d_s5,"Chapter 5 · Python Memory"),("s6",d_s6,"Chapter 6 · Graphs: BFS and DFS"),("s7",d_s7,"Chapter 7 · Topological Sort"),("s8",d_s8,"Finale · Recursion and Memoisation"),("end",d_end,"")]
+        x=70+(i%4)*285;y=210+(i//4)*125-(1-al)*30
+        rbox(d,(x,y,x+265,y+105),(20,26,56),c,14,3);ctext(d,(x+132,y+34),a,F(20),WHITE);ctext(d,(x+132,y+74),b,F(26),c)
+    if t>ts[2]:ctext(d,(W//2,490),"GATE DA 2027  ·  Google prep",F(34),WHITE)
+    if t>ts[3]:ctext(d,(W//2,540),"github.com/kasinadhsarma/gate  →  da-2027/",F(24,False),TEAL)
+
+def show(d,t,ts,k,xy,text,font,col=WHITE,anchor="lm"):
+    if t>=ts[k]:ctext(d,xy,text,font,col,anchor)
+def d_m1(d,t,sc):
+    ts=sc.ts;ctext(d,(W//2,170),"17 sweets, 5 friends",F(30),WHITE)
+    for i in range(17):
+        g,pos=(i//3,i%3) if i<15 else (5,i-15)
+        x=110+g*115+(pos*30 if g<5 else 0);y=260+(pos*34 if g<5 else 0)
+        if g==5:x=700+pos*34+0;y=300
+        col=[TEAL,GRN,PUR,GOLD,(255,140,200)][g] if g<5 else RED
+        if g<5:d.ellipse((110+g*115,260+pos*38,110+g*115+30,290+pos*38),fill=col)
+        else:d.ellipse((700+pos*38,300,730+pos*38,330),fill=col)
+    for g in range(5):ctext(d,(125+g*115,390),f"friend {g+1}",F(15),(170,180,215))
+    ctext(d,(715,360),"left over",F(16),RED)
+    L=[("17 / 5  =  3.4",2),("17 // 5  =  3   (quotient)",2),("17 % 5  =  2   (remainder)",2),("a = b·q + r :   17 = 5·3 + 2",3)]
+    for j,(tx,k) in enumerate(L):
+        if t>=ts[k]+j*1.6-(0 if k==2 else 0)*0:ctext(d,(110,455+j*34),tx,F(26,True,True),[TEAL,GRN,RED,GOLD][j],"lm")
+    if t>=ts[5]:
+        rbox(d,(760,420,1240,545),(20,24,50),RED,12,2)
+        ctext(d,(1000,448),"negatives (floor goes DOWN)",F(20),RED)
+        ctext(d,(1000,485),"-17 // 5  =  -4",F(28,True,True),WHITE);ctext(d,(1000,520),"-17 %  5  =   3",F(28,True,True),WHITE)
+    banner(d,ts[6],t,"TWIST #1 — floor means down, not toward zero",GOLD,115)
+def d_m2(d,t,sc):
+    ts=sc.ts;ctext(d,(W//2,170),"two ropes: 48 m and 18 m",F(30),WHITE)
+    u=8;x0,y0=90,230
+    d.rectangle((x0,y0,x0+48*u,y0+18*u),fill=(30,36,70),outline=WHITE,width=2)
+    if t>=ts[1]:
+        a=ease((t-ts[1])/2)
+        for i in range(8):
+            for j in range(3):
+                if (i*3+j)/24<=a:rbox(d,(x0+i*6*u+2,y0+j*6*u+2,x0+(i+1)*6*u-2,y0+(j+1)*6*u-2),(70,120,200),None,4)
+        ctext(d,(x0+24*u,y0+18*u+26),"tiles of 6 × 6 fit exactly:  GCD = HCF = 6",F(22),GOLD)
+    steps=[(48,18),(18,12),(12,6),(6,0)]
+    for j,(a,b) in enumerate(steps):
+        if t>=ts[2]+j*2.2:
+            ctext(d,(560+0,470+j*0),"",F(10))
+            ctext(d,(x0+j*215,475),f"({a}, {b})",F(30,True,True),TEAL if b else GOLD,"lm")
+            if j<3:ctext(d,(x0+j*215+150,475),"→",F(30),(150,160,200),"lm")
+    if t>=ts[2]:ctext(d,(x0,520),"(a, b)  →  (b, a mod b)   until b = 0",F(22),(170,180,215),"lm")
+    if t>=ts[5]:
+        rbox(d,(770,215,1240,385),(20,24,50),GOLD,12,2)
+        ctext(d,(1005,245),"LCM  (buses meet again)",F(22),GOLD)
+        ctext(d,(1005,290),"gcd × lcm = a × b",F(28,True,True),WHITE)
+        ctext(d,(1005,335),"lcm = 48·18 / 6 = 144",F(26,True,True),GRN)
+    banner(d,ts[6],t,"TWIST #2 — one GCD gives the LCM for free",PUR,115)
+PR=[2,3,5,7]
+def d_m3(d,t,sc):
+    ts=sc.ts;ctext(d,(330,170),"sieve of Eratosthenes (1 to 50)",F(26),WHITE)
+    pr=[n for n in range(2,51) if all(n%p for p in range(2,int(n**.5)+1))]
+    start=ts[3]+0.5;k=int(clamp((t-start)/2.2,0,4)) if t>=start else 0;cut=set()
+    for p in PR[:k]:cut|={m for m in range(2*p,51,p)}
+    for n in range(1,51):
+        r,c=(n-1)//10,(n-1)%10;x=70+c*58;y=215+r*58
+        col=(50,56,90);tc=WHITE
+        if n==1:col=(35,40,60);tc=(110,120,150)
+        elif n in cut:col=(40,30,40);tc=(120,80,90)
+        elif k>=4 and n in pr:col=GRN;tc=(10,20,20)
+        rbox(d,(x,y,x+50,y+50),col,None,6);ctext(d,(x+25,y+25),str(n),F(20),tc)
+    if t>=ts[1]:ctext(d,(330,520),"is n prime?  test divisors only up to √n",F(22),TEAL)
+    if t>=ts[4]:
+        ctext(d,(930,230),"modular arithmetic = a clock",F(22),GOLD)
+        ctext(d,(930,275),"(7·8) mod 5  =  1",F(26,True,True),WHITE);ctext(d,(930,315),"((7 mod 5)·(8 mod 5)) mod 5 = 1",F(18,True,True),(170,180,215))
+    if t>=ts[5]:
+        ctext(d,(930,385),"fast power: 3^13",F(22),GOLD)
+        ctext(d,(930,425),"13 → 6 → 3 → 1 → 0",F(26,True,True),TEAL);ctext(d,(930,465),"3^13 = 1,594,323  in ~log₂13 steps",F(18),WHITE)
+    banner(d,ts[6],t,"TWIST #3 — cross out multiples, primes remain",GRN,115)
+import math as _m
+def d_m4(d,t,sc):
+    ts=sc.ts
+    L=[("5 choose 2 = 10   (order ignored)",1,TEAL),("5 × 4 = 20   (order matters)",1,GRN),("P(sum of two dice = 7) = 6/36 = 1/6",2,PUR),("E[die] = 3.5 ,   E[X+Y] = E[X]+E[Y]",2,GOLD)]
+    for j,(tx,k,c) in enumerate(L):
+        if t>=ts[k]+j%2*1.6:ctext(d,(70,200+j*40),tx,F(22,True,True),c,"lm")
+    if t>=ts[4]:
+        ctext(d,(W//2+170,170),"1000 people tested",F(24),WHITE)
+        cols,rows=40,25;sz=13
+        for i in range(1000):
+            r,c=i//cols,i%cols;x=690-120+c*sz;y=190+r*sz
+            sick=i<10;flag_h=(10<=i<99);pos=sick and i<9
+            col=(60,68,100)
+            if t>=ts[4]+1:
+                if sick:col=RED
+                if i<9 and t>=ts[4]+2:col=(255,120,40)
+                if flag_h and t>=ts[4]+3:col=GOLD
+            d.rectangle((x,y,x+sz-4,y+sz-4),fill=col)
+        if t>=ts[4]+1:ctext(d,(70,340),"red = sick (10)   gold = healthy but flagged (≈89)",F(18),(210,220,250),"lm")
+    if t>=ts[5]:
+        rbox(d,(60,380,590,500),(20,24,50),GOLD,12,2)
+        ctext(d,(325,408),"P(sick | positive)",F(22),GOLD);ctext(d,(325,448),"= 9 / (9 + 89) ≈ 9.2 %",F(30,True,True),WHITE)
+        ctext(d,(325,482),"Bayes: posterior = likelihood × prior / evidence",F(16),(170,180,215))
+    banner(d,ts[6],t,"TWIST #4 — a positive test can still mean healthy",RED,115)
+def bday(n):
+    r=1.0
+    for i in range(n):r*=(365-i)/365
+    return 1-r
+def d_m5(d,t,sc):
+    ts=sc.ts
+    x0,y0,wd,ht=620,200,560,300
+    d.line([(x0,y0),(x0,y0+ht),(x0+wd,y0+ht)],fill=(150,160,200),width=2)
+    ctext(d,(x0+wd/2,y0-26),"birthday paradox: P(two people share a birthday)",F(20),WHITE)
+    a=ease((t-ts[3])/3) if t>=ts[3] else 0
+    pts=[(x0+n/60*wd,y0+ht-bday(n)*ht) for n in range(0,61)]
+    m=int(len(pts)*a)
+    if m>1:d.line(pts[:m],fill=TEAL,width=4)
+    for fr,lab in ((0.5,"50%"),(1.0,"100%")):
+        yy=y0+ht-fr*ht;d.line([(x0,yy),(x0+wd,yy)],fill=(70,80,110),width=1);ctext(d,(x0-10,yy),lab,F(14),(170,180,215),"rm")
+    if a>=0.45:
+        px,py=pts[23];d.ellipse((px-8,py-8,px+8,py+8),fill=GOLD);ctext(d,(px+14,py+18),"n = 23 → 50.7%",F(20),GOLD,"lm")
+    ctext(d,(x0+wd/2,y0+ht+26),"people (n)",F(14),(170,180,215))
+    items=[("Euclid GCD","a loop",1),("sieve","an array",1),("fast power","divide and conquer",1),("hash table","probability",1),("random pivot","expected n log n",4)]
+    for j,(a_,b_,k) in enumerate(items):
+        if t>=ts[k]+j*0.9 if k==1 else t>=ts[k]:
+            rbox(d,(60,200+j*62,560,250+j*62),(20,26,56),[TEAL,GRN,PUR,GOLD,RED][j],10,2)
+            ctext(d,(80,225+j*62),a_,F(22),WHITE,"lm");ctext(d,(540,225+j*62),b_,F(20,False),[TEAL,GRN,PUR,GOLD,RED][j],"rm")
+    if t>=ts[3]+3.5:ctext(d,(x0+wd/2,540),"300 keys, 10,000 slots → collision 98.9%",F(22),RED)
+    banner(d,ts[5],t,"TWIST #5 — collisions arrive early",GOLD,115)
+SCENES=[("title",d_title,""),("m1",d_m1,"Basement · Arithmetic"),("m2",d_m2,"Basement · GCD, HCF, LCM"),("m3",d_m3,"Basement · Primes and Modular Arithmetic"),("m4",d_m4,"Basement · Counting and Probability"),("m5",d_m5,"Basement · Math inside DSA"),("s1",d_s1,"Chapter 1 · Linear Search"),("s2",d_s2,"Chapter 2 · Binary Search"),("s3",d_s3,"Chapter 3 · Merge Sort"),("s4",d_s4,"Chapter 4 · Hashing"),("s5",d_s5,"Chapter 5 · Python Memory"),("s6",d_s6,"Chapter 6 · Graphs: BFS and DFS"),("s7",d_s7,"Chapter 7 · Topological Sort"),("s8",d_s8,"Finale · Recursion and Memoisation"),("end",d_end,"")]
 def render(key,out):
     sc=Sc(key);fn=[x for x in SCENES if x[0]==key][0]
     n=int(sc.dur*FPS)
