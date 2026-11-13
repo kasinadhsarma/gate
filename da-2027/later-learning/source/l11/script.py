@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film eleven. Bits, arrays and prefix sums."),
+(N,"XOR tricks, two D and three D arrays. Every idea runs as plain Python with comments.")],
+"xor":[(N,"Room one. XOR and bit tricks."),
+(R,"Which number appears only once, when all the others appear twice?"),
+(S,"XOR everything together. A number XORed with itself is zero, so pairs cancel and only the single number is left. For four, one, two, one, two it prints four."),
+(S,"XOR also swaps two numbers without a temporary variable. Five and nine become nine and five."),
+(S,"And n and n minus one clears the lowest one bit. If the result is zero, n is a power of two. Sixteen is. Eighteen is not."),
+(N,"Twist one. XOR cancels equal values. N and n minus one clears the lowest set bit.")],
+"arr":[(N,"Room two. Two D and three D arrays, and prefix sums."),
+(R,"How do I think about a grid, and a cube of numbers?"),
+(S,"A two D array is a list of rows. M of one, two is row one, column two, which is six. The transpose swaps rows and columns."),
+(S,"A three D array adds depth. Cube of one, zero, one is depth one, row zero, column one. In memory a grid is stored row by row, so the index is r times columns plus c."),
+(S,"Prefix sums store running totals: zero, three, four, eight, nine, fourteen. The sum of items one to three is pre of four minus pre of one. That is six, in constant time."),
+(N,"Twist two. Precompute once, answer range questions instantly.")],
+"wk":[(N,"Walkthrough. XOR cancelling, line by line."),
+(S,"x starts at zero. We XOR in four, then one, then two."),
+(S,"The second one cancels the first one, and the second two cancels the first two. Only four survives."),
+(N,"Main logic. Equal values cancel. What is left is the odd one out.")],
+"end":[(N,"Film eleven is complete. Bits, grids and prefix sums."),(N,"Next: two sum, three sum and friends.")],
+}

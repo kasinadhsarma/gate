@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film seven. MLOps and model serving."),
+(N,"Versions, input checks, tests and drift. Every idea runs as plain Python with comments.")],
+"serve":[(N,"Room one. Serving a model."),
+(R,"My model works in my notebook. What more is there?"),
+(S,"A saved model needs a version, so you always know what is live. We write the weights and a version to a file, and load them back."),
+(S,"Then a predict function must validate its input. Three gives six point oh two. The string A B C is rejected with a clear message instead of crashing."),
+(S,"Finally a unit test: predicting zero must give the bias. Tests run before every deploy."),
+(N,"Twist one. Production is the model plus its version, its input checks, and its tests.")],
+"drift":[(N,"Room two. Drift."),
+(R,"The model was good last month. Why is it worse now?"),
+(S,"Because the world changed. Compare today's input mix with the training mix, bin by bin, using the population stability index."),
+(S,"Training had a quarter of the data in each of four bins. A healthy live mix gives an index of zero point zero zero one. A shifted mix gives zero point five five five."),
+(S,"A common rule: above zero point two five means investigate or retrain."),
+(N,"Twist two. A model does not wear out. The data it sees drifts away from what it learned.")],
+"wk":[(N,"Walkthrough. Input validation, line by line."),
+(S,"predict checks the type first. A number passes, anything else raises an error."),
+(S,"Only then does it compute. Three times two is six, printed."),
+(N,"Main logic. Reject bad input at the door.")],
+"end":[(N,"Film seven is complete. Serving, tests and drift."),(N,"Next: data engineering.")],
+}

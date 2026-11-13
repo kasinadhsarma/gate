@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film fourteen. Range queries, union find and tries."),
+(N,"Advanced data structures, part one. Every idea runs as plain Python with comments.")],
+"fen":[(N,"Room one. Range queries."),
+(R,"I need sums over ranges, and the data keeps changing. A prefix array is too slow to update."),
+(S,"A Fenwick tree stores partial sums. Each cell covers a block sized by the lowest set bit of its index, so an update or a query takes only about log n steps. The total is thirty one, items three to five sum to ten, and after adding ten to item three, twenty."),
+(R,"And for a minimum or a maximum, not just sums?"),
+(S,"A segment tree. Every parent holds the minimum of its two children, so any range is covered by a few nodes. The minimum of items one to three is one, and of items four to seven, three."),
+(N,"Twist one. Pay a little on every update, so that every range question costs only log n.")],
+"dsu":[(N,"Room two. Union find and tries."),
+(R,"How do I track which items are connected, as links keep arriving?"),
+(S,"Union find. Every item points to a parent, and the root names the group. Find follows parents to the root and flattens the path as it goes. Union hangs the shorter tree under the taller one. After joining zero, one, two, and three, four, there are three groups, and zero and two are together."),
+(R,"And finding every word that starts with the same letters?"),
+(S,"A trie. Each letter is one level down, so a word costs its own length, no matter how many words are stored. Prefix car returns car, card and care. Prefix x returns nothing."),
+(N,"Twist two. Union find gives near constant time connectivity. A trie makes prefix search independent of dictionary size.")],
+"wk":[(N,"Walkthrough. Find with path compression, line by line."),
+(S,"Item two points to one, and one points to zero. Asking for the root of two follows both pointers."),
+(S,"The recursion returns zero, and then rewrites the parent of two to point straight at zero. Next time it is one step."),
+(N,"Main logic. Find the root, then shortcut everything on the way.")],
+"end":[(N,"Film fourteen is complete. Fenwick, segment tree, union find and trie."),(N,"Next: balanced trees, Bloom filters and k d trees.")],
+}

@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film fifteen. Balanced trees, Bloom filters and k d trees."),
+(N,"Advanced data structures, part two. Every idea runs as plain Python with comments.")],
+"bal":[(N,"Room one. Self balancing trees."),
+(R,"Why do trees go wrong in the first place?"),
+(S,"Insert thirty, twenty, ten into a plain tree and it becomes a chain, three long. Insert a thousand sorted keys and it is a thousand long. Search turns into a linear scan."),
+(S,"An AVL tree checks the height difference at every node. If the left side is two taller, it rotates right: the left child is lifted to become the root. Thirty, twenty, ten ends with twenty at the top, height two."),
+(S,"A balanced tree of a thousand keys is only ten levels tall. Red black trees, splay trees and B trees use other rules, but all keep the height near log n. B trees use wide nodes, which is why databases like them. Skip lists get the same effect with random coin flips."),
+(N,"Twist one. Balance is kept by small local rotations, so every operation stays logarithmic.")],
+"prob":[(N,"Room two. Bloom filters and k d trees."),
+(R,"How can I check membership without storing everything?"),
+(S,"A Bloom filter is a row of bits with a few hash functions. Adding a word sets its three bits. Asking checks the same three bits. Apple says yes. Grape says no. A no is always right, but a yes may be a false positive."),
+(R,"And for the nearest points in two dimensions?"),
+(S,"A k d tree splits the points at the median, alternating x and y. To find the nearest point to nine, two, we go down the near side first, then visit the far side only if the splitting line is closer than the best so far. The answer is eight, one."),
+(N,"Twist two. Trade exactness for space with a Bloom filter, and skip whole regions with a k d tree.")],
+"wk":[(N,"Walkthrough. The balance check, line by line."),
+(S,"The left subtree has height two and the right has height zero. Balance is the difference."),
+(S,"Two is greater than one, so the node is unbalanced and we rotate right."),
+(N,"Main logic. Compare heights, rotate when the difference passes one.")],
+"end":[(N,"Film fifteen is complete. Rotations, Bloom filters and k d trees."),(N,"Next: shortest paths, spanning trees and ordering.")],
+}

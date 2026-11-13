@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film five. Reinforcement learning basics."),
+(N,"Q learning and the explore versus exploit trade off. Every idea runs as plain Python with comments.")],
+"q":[(N,"Room one. Learning from rewards."),
+(R,"There is no answer key here. How does the agent learn?"),
+(S,"A corridor of five states with a reward at the right end. The agent keeps a Q table: how good is each action in each state."),
+(S,"After every move it nudges Q toward the reward it got, plus the discounted best future value. That is the Q learning update."),
+(S,"After two hundred episodes the values grow toward the goal: zero point seven three, zero point eight one, zero point nine, one. And the best action in every state is go right."),
+(N,"Twist one. The agent never sees the rule. It only feels the reward, and values flow backwards from the goal.")],
+"eps":[(N,"Room two. Explore or exploit."),
+(R,"Why not always pick the best action so far?"),
+(S,"Because the best so far may only look best. Three machines win thirty, fifty and eighty percent of the time."),
+(S,"An agent that never explores locks onto the first machine it tried. In two thousand pulls it wins only five hundred ninety five."),
+(S,"Exploring ten percent of the time finds the best machine, and wins one thousand five hundred twenty."),
+(N,"Twist two. A little randomness is the price of finding something better.")],
+"wk":[(N,"Walkthrough. One Q learning update, line by line."),
+(S,"The old value is zero. The reward is one, and nothing is known about the next state yet."),
+(S,"The new value is the old one plus alpha times the surprise. The surprise is the reward plus gamma times the best next value, minus the old value. That is one, so half of it is added."),
+(N,"Main logic. Move a fraction alpha toward what actually happened.")],
+"end":[(N,"Film five is complete. Q learning and exploration."),(N,"Next: Bayesian methods and A B tests.")],
+}

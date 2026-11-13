@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film sixteen. Shortest paths, spanning trees and ordering."),
+(N,"Advanced graph algorithms, part one. Every idea runs as plain Python with comments.")],
+"sp":[(N,"Room one. Shortest paths."),
+(R,"Which route is the shortest, when roads have different lengths?"),
+(S,"Dijkstra's algorithm always settles the closest unsettled node next, using a priority queue. From A the distances are C one, B three through C, and D four. It needs no negative edges."),
+(R,"What if a road has a negative cost?"),
+(S,"Bellman Ford relaxes every edge again and again, V minus one rounds. With a minus two edge, B becomes minus one and D becomes zero. Floyd Warshall tries every stop over for every pair, giving all pairs in cubic time. A star is Dijkstra plus a guess of the remaining distance, to head towards the goal."),
+(N,"Twist one. Dijkstra is fast but needs non negative weights. Bellman Ford is slower but safe with negative ones.")],
+"mst":[(N,"Room two. Spanning trees and ordering."),
+(R,"Connect every city with the least total cable."),
+(S,"Kruskal sorts the edges cheapest first and takes each edge unless it would close a cycle. Here it picks A B, B C and C D, for a total of seven. Prim grows one tree from a start node instead."),
+(R,"And what if tasks depend on each other?"),
+(S,"Topological sort. Count what each item waits for, start with items that wait for nothing, and release the others as their needs are done. Shirt, pants, tie, shoes, jacket is one valid order."),
+(N,"Twist two. Greedy works for spanning trees, and counting dependencies gives a valid order for any acyclic graph.")],
+"wk":[(N,"Walkthrough. One edge relaxation, line by line."),
+(S,"A is at zero, B is unknown at ninety nine, and the edge weighs four."),
+(S,"Zero plus four is less than ninety nine, so B improves to four. Relaxing just asks: is this route better than what I know?"),
+(N,"Main logic. Every shortest path algorithm repeats this single check.")],
+"end":[(N,"Film sixteen is complete. Dijkstra, Bellman Ford, Kruskal and topological sort."),(N,"Next: network flow and connectivity.")],
+}

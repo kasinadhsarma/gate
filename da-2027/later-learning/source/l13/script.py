@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film thirteen. Neuromorphic computing."),
+(N,"Spiking neurons and learning by spike timing. Every idea runs as plain Python with comments.")],
+"lif":[(N,"Room one. Spiking neurons."),
+(R,"What is a neuromorphic computer, and how is it different?"),
+(S,"It copies the brain. Instead of passing numbers through every neuron at every step, neurons send short spikes, and only when something happens."),
+(S,"The basic model is the leaky integrate and fire neuron. Its voltage leaks a little, input adds to it, and when it crosses the threshold it fires a spike and resets."),
+(S,"With these inputs the voltage climbs to zero point eight one, leaks, and then the fifth step crosses one. The spike list has a single one."),
+(N,"Twist one. A spiking neuron computes with time. It speaks only when its voltage crosses a threshold.")],
+"stdp":[(N,"Room two. Learning by spike timing, and energy."),
+(R,"How does a spiking network learn?"),
+(S,"With spike timing dependent plasticity. If the input neuron fires just before the output neuron, it helped cause it, so the connection strengthens."),
+(S,"If it fires just after, the connection weakens. From a weight of zero point five, a gap of plus two gives zero point five six seven, and minus two gives zero point four three three."),
+(S,"The energy argument: if only two percent of a thousand neurons spike at a step, only twenty do any work. Neuromorphic chips such as Loihi and TrueNorth are built to exploit that."),
+(N,"Twist two. Timing is the signal, and silence costs nothing.")],
+"wk":[(N,"Walkthrough. Two inputs charging a neuron, line by line."),
+(S,"Voltage starts at zero. The first input of zero point six leaves it at zero point six, below one, so no spike."),
+(S,"The second step leaks a little, then adds again, reaching one point one four. That crosses the threshold, so it would fire."),
+(N,"Main logic. Leak, add, compare. Fire when it crosses.")],
+"end":[(N,"Film thirteen is complete. Next, advanced data structures begin."),(N,"Watch them in order, and the handbook follows.")],
+}

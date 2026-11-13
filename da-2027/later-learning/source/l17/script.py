@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film seventeen. Network flow and connectivity."),
+(N,"Advanced graph algorithms, part two. Every idea runs as plain Python with comments.")],
+"flow":[(N,"Room one. Network flow."),
+(R,"How much water can I push from the source to the sink, through pipes of limited size?"),
+(S,"That is maximum flow. Find any path from S to T with spare capacity, using breadth first search so the shortest is chosen. That is Edmonds Karp. Push the bottleneck amount along it."),
+(S,"Every edge also has a reverse edge. Sending flow along it later cancels earlier flow, so a poor early choice can be undone."),
+(S,"When no path is left, the flow is maximal. Here it is five, which equals the smallest cut separating S from T. Max flow equals min cut."),
+(N,"Twist one. Keep finding augmenting paths. When none exists, the flow you have is the best possible.")],
+"scc":[(N,"Room two. Connectivity."),
+(R,"In a directed graph, which groups of nodes can all reach each other?"),
+(S,"Those are strongly connected components. Kosaraju runs a depth first search and records finishing order, reverses every edge, then searches in reverse finishing order. Each search finds one component. Here zero, one, two form one, and three, four, five form another."),
+(R,"And which single link, if cut, splits the network?"),
+(S,"Tarjan's method tracks each node's discovery time and lowest reachable time. If the child cannot reach back above its parent, the edge is a bridge. Here the link from two to three is the only bridge."),
+(N,"Twist two. One or two depth first passes reveal all the weak points of a graph.")],
+"wk":[(N,"Walkthrough. Pushing the bottleneck, line by line."),
+(S,"A path has spare room of three, two and five on its edges."),
+(S,"The bottleneck is the smallest, two. We push two, and the first edge has one unit of spare capacity left."),
+(N,"Main logic. A chain is only as strong as its weakest link.")],
+"end":[(N,"Film seventeen is complete. Flow, strongly connected components and bridges."),(N,"Next: advanced dynamic programming and string matching.")],
+}

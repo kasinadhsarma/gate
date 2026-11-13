@@ -1,0 +1,21 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film nineteen. Number theory and combinatorics."),
+(N,"Sieve, modular arithmetic and counting. Every idea runs as plain Python with comments.")],
+"sieve":[(N,"Room one. Primes and modular arithmetic."),
+(R,"How do I list all primes up to a million, quickly?"),
+(S,"The sieve of Eratosthenes. Cross out the multiples of each prime, starting at its square. What is left is prime. Up to thirty: two, three, five, seven, eleven, thirteen, seventeen, nineteen, twenty three, twenty nine."),
+(R,"Big powers overflow. How do I handle two to the hundredth, modulo a billion and seven?"),
+(S,"Fast modular exponentiation. Square the base and halve the exponent, multiplying in the base whenever the exponent bit is one. Only about log e steps, and it matches Python's own power. Euclid's loop gives the greatest common divisor, twelve for eighty four and thirty six, and the least common multiple, two hundred fifty two."),
+(N,"Twist one. Work with remainders all the way, and the numbers never get large.")],
+"comb":[(N,"Room two. Combinatorics modulo a prime."),
+(R,"How many ways to choose three from ten, when the answer can be huge?"),
+(S,"Precompute factorials modulo the prime. N choose r is n factorial, divided by r factorial and n minus r factorial. Division modulo a prime means multiplying by the inverse, found with Fermat's little theorem as a power of p minus two."),
+(S,"Ten choose three is one hundred twenty. Twenty choose ten is one hundred eighty four thousand seven hundred fifty six."),
+(N,"Twist two. Division modulo a prime is multiplication by a power. That is the key to counting problems.")],
+"wk":[(N,"Walkthrough. Fast power, line by line."),
+(S,"We want two to the fifth, modulo one thousand. Five is one zero one in binary."),
+(S,"Each loop squares the base and shifts the exponent. When the lowest bit is one, we multiply the result. The answer is thirty two."),
+(N,"Main logic. Read the exponent in binary, square as you go.")],
+"end":[(N,"Film nineteen is complete. That finishes the advanced data structures and algorithms set."),(N,"Next: advanced machine learning.")],
+}

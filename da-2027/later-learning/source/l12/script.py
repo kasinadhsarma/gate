@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film twelve. Two sum, three sum and problem patterns."),
+(N,"Hashing, two pointers and sliding windows. Every idea runs as plain Python with comments.")],
+"tsum":[(N,"Room one. Two sum and three sum."),
+(R,"Find two numbers that add up to a target."),
+(S,"The slow way tries every pair. The fast way keeps a dictionary of values seen so far. For each number, ask whether its partner, target minus value, has been seen. For two, seven, eleven, fifteen and nine, it returns positions zero and one."),
+(S,"Three sum sorts the list, fixes one number, then moves two pointers inward from both ends. Too small, move the left pointer. Too big, move the right. Skip repeated values."),
+(S,"On minus one, zero, one, two, minus one, minus four, it finds minus one, minus one, two, and minus one, zero, one."),
+(N,"Twist one. A hash map turns quadratic into linear. Sorting plus two pointers handles three sum in quadratic time.")],
+"pal":[(N,"Room two. Palindromes, windows and anagrams."),
+(R,"How do I check a palindrome without building a reversed copy?"),
+(S,"Use two pointers, one at each end, moving inward and comparing. Ignore punctuation and case. A man, a plan, a canal, Panama is true. Hello is false."),
+(S,"A sliding window keeps the sum of the last k items. Add the new item, drop the old one. The best window of three in two, one, five, one, three, two is nine."),
+(S,"An anagram check is just two sorted words being equal. Listen and silent match."),
+(N,"Twist two. Two pointers and sliding windows turn nested loops into one pass.")],
+"wk":[(N,"Walkthrough. Two sum with a dictionary, line by line."),
+(S,"We look at two first, the partner seven is not seen, so we store two at position zero. Then seven: its partner is two, already seen at position zero."),
+(S,"So we print zero and one and stop. The dictionary made the lookup instant."),
+(N,"Main logic. Remember what you have seen, and ask for the missing partner.")],
+"end":[(N,"Film twelve is complete. Hashing, pointers and windows."),(N,"Last: neuromorphic computing.")],
+}
