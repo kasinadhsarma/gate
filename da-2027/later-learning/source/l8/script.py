@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film eight. Data engineering."),
+(N,"Pipelines, warehouses and SQL at scale. Every idea runs as plain Python with comments.")],
+"etl":[(N,"Room one. Pipelines and warehouses."),
+(R,"Where does the data for a model or a dashboard come from?"),
+(S,"From a pipeline: extract raw rows, transform them, load them into a warehouse table. Our raw feed has a duplicate row."),
+(S,"The table has a primary key on day and product, and we load with insert or replace. Running the load again cannot double count. That property is called idempotent."),
+(S,"The table ends with three rows, and a group by query gives product one fifty, product two twenty."),
+(N,"Twist one. A good pipeline can be re run safely. Idempotent loads are what let you recover from failures.")],
+"scale":[(N,"Room two. SQL at scale."),
+(R,"What changes when there are billions of rows?"),
+(S,"You split the data. Hash the key to choose a shard, so the same user always lands on the same machine. A thousand users spread as two forty nine, two fifty one, two forty nine, two fifty one."),
+(S,"And you stop reprocessing everything. A watermark remembers the last row done, so tonight only ten rows are new, not a thousand."),
+(S,"Columnar warehouses then read only the columns a query needs, and partitions let a query skip whole days."),
+(N,"Twist two. Scale comes from not touching data you do not need. Shard, partition, and process only what is new.")],
+"wk":[(N,"Walkthrough. Idempotent load, line by line."),
+(S,"The feed has a repeated key, a, with the same value."),
+(S,"Writing by key replaces the old value instead of adding another. The table ends with two keys, not three."),
+(N,"Main logic. Same key, same slot. Re running changes nothing.")],
+"end":[(N,"Film eight is complete. Idempotent loads, shards and watermarks."),(N,"Next: system design for production apps.")],
+}

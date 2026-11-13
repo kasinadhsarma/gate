@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film three. Transformers and large language models."),
+(N,"Attention, temperature and size. Every idea runs as plain Python with comments.")],
+"att":[(N,"Room one. Attention."),
+(R,"How does a model decide which words matter to each other?"),
+(S,"Each word makes a query, a key and a value. The query says what I am looking for. The key says what I offer. The value is what I carry."),
+(S,"We score the query against every key with a dot product, divide by the square root of the size, and softmax the scores into weights that sum to one."),
+(S,"Here the weights are zero point four one, zero point two, and zero point three eight. The output is the weighted mix of the values, seven point two and two point eight."),
+(N,"Twist one. Attention is a weighted average of values, where the weights come from how well queries match keys.")],
+"temp":[(N,"Room two. How a language model speaks."),
+(R,"What is a large language model actually doing?"),
+(S,"It predicts the next token, one at a time. For every candidate it produces a score, and softmax turns scores into probabilities."),
+(S,"Temperature rescales those scores. At temperature one, cat has sixty six percent. At zero point two it is ninety nine percent, almost greedy. At three it flattens to forty four, thirty two and twenty four."),
+(S,"And size. With a width of four thousand ninety six and thirty two layers, the blocks hold about six billion weights. Every one is learned by predicting the next token."),
+(N,"Twist two. Low temperature is predictable, high temperature is creative, and the size is just stacked attention blocks.")],
+"wk":[(N,"Walkthrough. Softmax of three scores, line by line."),
+(S,"Scores two, one and zero point one. We exponentiate each one, so bigger scores grow much faster."),
+(S,"Divide each by the total and we get zero point six six, zero point two four, and zero point one. They sum to one."),
+(N,"Main logic. Exponentiate, normalise. Attention and sampling both use it.")],
+"end":[(N,"Film three is complete. Attention, temperature and size."),(N,"Next: natural language processing and retrieval.")],
+}

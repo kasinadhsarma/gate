@@ -1,0 +1,23 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film one. Advanced data structures and algorithms."),
+(N,"Dynamic programming, greedy choices and backtracking. Every idea runs as plain Python with comments.")],
+"dp":[(N,"Room one. Dynamic programming."),
+(R,"Why is plain recursion for Fibonacci so slow?"),
+(S,"Because it recomputes the same answers again and again. Fibonacci of thirty makes about one point six million calls without help."),
+(S,"Remember each answer once, with a cache, and it is only thirty one calls. The code prints eight three two zero four zero, and thirty one."),
+(S,"The second example is the longest common subsequence of A G G T A B and G X T X A Y B. Each table cell is the best answer for two prefixes. If the letters match, extend the diagonal. Otherwise take the better neighbour. It prints four."),
+(N,"Twist one. Dynamic programming is just recursion plus a table of answers you already know.")],
+"gr":[(N,"Room two. Greedy and backtracking."),
+(R,"When can I just grab the best choice every time?"),
+(S,"When that local choice is provably safe. In interval scheduling, sort by finish time and take every job that fits. Three jobs fit."),
+(S,"But coins one, five, six and nine, making eleven, break greedy. Greedy takes nine plus two ones, three coins. The table finds six plus five, only two."),
+(S,"Backtracking is the third tool. Place queens one row at a time, and undo a choice the moment it clashes. Six queens on a six by six board have four solutions."),
+(N,"Twist two. Greedy needs a proof. When greedy fails, dynamic programming is the safe fallback, and backtracking explores with undo.")],
+"wk":[(N,"Walkthrough. Memoised Fibonacci, line by line."),
+(S,"We ask for fib of five. The memo dictionary starts empty, and the base case handles n below two."),
+(S,"The first time we meet an n, we build it from the two smaller answers and store it in memo."),
+(N,"Main logic. Every answer is computed once, then looked up. That is the whole trick.")],
+"end":[(N,"Film one is complete. Memoisation, tables, greedy proofs and backtracking."),
+(N,"Next: deep learning.")],
+}

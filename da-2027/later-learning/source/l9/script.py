@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film nine. System design for production apps."),
+(N,"Capacity arithmetic, caching and consistent hashing. Every idea runs as plain Python with comments.")],
+"cache":[(N,"Room one. Capacity and caching."),
+(R,"Where do I even begin designing a system?"),
+(S,"With arithmetic. A million requests a day is only about eleven point six per second on average. Peak is maybe three to ten times that."),
+(S,"Then add a cache for hot data. A least recently used cache keeps a fixed number of items, and when it is full it evicts the oldest."),
+(S,"With capacity two, we put a and b, read a, then put c. The cache holds a and c. B was the least recently used, so it left."),
+(N,"Twist one. Estimate first. Most designs are decided by simple numbers, not by clever diagrams.")],
+"ring":[(N,"Room two. Spreading load with consistent hashing."),
+(R,"I have three servers. How do I decide which stores which user?"),
+(S,"Hash the users and the servers onto a ring. A user belongs to the next server clockwise. Each server has fifty points on the ring, to even out the load."),
+(S,"Simple modulo hashing would reshuffle almost everything when a fourth server joins. On the ring only about a quarter of the keys move. Zero point two four in our run."),
+(S,"That is why caches and databases use it. Adding capacity does not flush everything."),
+(N,"Twist two. Consistent hashing moves only the keys that must move.")],
+"wk":[(N,"Walkthrough. The recency trick, line by line."),
+(S,"An ordered dictionary remembers insertion order. We add a, then b."),
+(S,"Reading a calls move to end, so a becomes the most recent. The order is now b, then a. Evict from the front and b goes first."),
+(N,"Main logic. Move to the back on use, evict from the front.")],
+"end":[(N,"Film nine is complete. Estimates, caches and rings."),(N,"Next: security of machine learning systems.")],
+}

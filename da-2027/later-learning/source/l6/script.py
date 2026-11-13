@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film six. Bayesian methods and A B experiment design."),
+(N,"Updating beliefs, and deciding if a test result is real. Every idea runs as plain Python with comments.")],
+"bay":[(N,"Room one. Bayesian thinking."),
+(R,"Twelve clicks from a hundred views. Is the click rate twelve percent?"),
+(S,"Start with a flat belief, a Beta one one. Add the clicks to the first number and the misses to the second. The new belief is Beta thirteen, eighty nine."),
+(S,"Its mean is zero point one two seven and its spread about zero point zero three three. It is a whole curve of belief, not a single number."),
+(S,"Compare it with a variant that got eighteen clicks in a hundred. Sampling both curves, the chance that variant B is really better is zero point eight eight."),
+(N,"Twist one. A posterior is a belief you update with data, and it answers the question you actually care about.")],
+"ab":[(N,"Room two. A B tests."),
+(R,"Version B got one fifty conversions, A got one twenty, from a thousand users each. Is B better?"),
+(S,"The z test compares two rates against their pooled noise. Here z is one point nine six, right at the five percent line. Borderline, not a clear win."),
+(S,"Before a test, decide the sample size. To detect twelve percent versus fifteen percent with eighty percent power, you need about two thousand thirty one users per arm."),
+(S,"So this test was too small to be sure. And do not peek and stop early. Repeated peeking inflates false alarms."),
+(N,"Twist two. Decide the sample size before you start, then look once.")],
+"wk":[(N,"Walkthrough. A Beta update in a few lines."),
+(S,"We start at a one, b one, a flat belief."),
+(S,"Twelve clicks go to a, eighty eight misses go to b. The mean is a over a plus b, zero point one two seven."),
+(N,"Main logic. Count successes and failures. That is the entire update.")],
+"end":[(N,"Film six is complete. Posteriors, z tests and sample size."),(N,"Next: MLOps and model serving.")],
+}

@@ -22,6 +22,7 @@ Each syllabus section is a LaTeX-built PDF told through two friends, Ramu (asks 
 | 🎬 | Artificial Intelligence film (7.1 min: search, logic, Bayesian networks, sampling) | [mp4](7-artificial-intelligence/film/Operation_Gate_Artificial_Intelligence_Thinking_Machine.mp4) |
 | 🎬 | Part 2 films that finish the syllabus: [DSA](4-programming-dsa/film/Operation_Gate_DSA_Part2_Data_Structure_Workshop.mp4), [Statistics](1-probability-statistics/film/Operation_Gate_Statistics_Clinic_Summary_Correlation_t_test.mp4), [DBMS](5-dbms-warehousing/film/Operation_Gate_DBMS_Part2_Relational_Algebra.mp4), [ML](6-machine-learning/film/Operation_Gate_ML_Part2_Clustering_LDA_Regression.mp4), [AI](7-artificial-intelligence/film/Operation_Gate_AI_Part2_Iterative_Deepening_dSeparation.mp4) | |
 | 📋 | [Video watch order (xlsx)](study-plan/GATE_DA_2027_Video_Watch_Order.xlsx) and [missing-topics addendum PDF](study-plan/GATE_DA_2027_Missing_Topics_Addendum.pdf) | |
+| 🎓 | [Later Learning films and out-of-syllabus handbook](later-learning/README.md) - 37 films beyond the syllabus | |
 | 🛠 | Shared film tooling (visual helpers, line tracer, build driver, commented lab code) | [shared-film-tools](shared-film-tools/) |
 
 Each folder also has the `.tex` source (`latexmk -pdf file.tex`). `archive/earlier-editions` holds superseded versions. `4-programming-dsa/verification` has the scripts used to check every answer. Past-question stems are paraphrased from the official papers; answers match the official keys.

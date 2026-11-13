@@ -1,0 +1,22 @@
+N,R,S="N","R","S"
+SCENES={
+"title":[(N,"Operation Gate. Later learning, film four. Natural language processing and retrieval."),
+(N,"Search with vectors, and retrieval augmented generation. Every idea runs as plain Python with comments.")],
+"ret":[(N,"Room one. Finding the right document."),
+(R,"How can a program find the answer to, how long does shipping take?"),
+(S,"Turn every document and the question into a vector of word weights. Rare words get more weight. That is the idea of tf idf."),
+(S,"Then compare vectors with cosine similarity. The more they point the same way, the higher the score."),
+(S,"The scores are zero, zero point one five, and zero. The shipping document wins: shipping takes five business days."),
+(N,"Twist one. Modern embeddings replace word counts with learned meaning vectors, but the search is the same. Nearest vector wins.")],
+"rag":[(N,"Room two. Retrieval augmented generation."),
+(R,"Why not just ask the model directly?"),
+(S,"A model can invent answers, and it does not know your private documents. So we retrieve first, then let it answer from what we found."),
+(S,"Long texts are split into overlapping chunks. Ten words, chunks of six, overlap of two, become two chunks. Nothing is cut off without context."),
+(S,"The prompt then tells the model: answer only from the context, followed by the retrieved text and the question."),
+(N,"Twist two. Retrieval supplies the facts, generation supplies the language. Test both parts separately.")],
+"wk":[(N,"Walkthrough. A tiny overlap score, line by line."),
+(S,"The question has two words, and the document has two words. They share one, ship."),
+(S,"Overlap is one, the union is three words, so the score is one third, zero point three three."),
+(N,"Main logic. Shared words divided by all words. The simplest form of retrieval.")],
+"end":[(N,"Film four is complete. Vector search and retrieval augmented generation."),(N,"Next: reinforcement learning.")],
+}
