@@ -114,3 +114,14 @@ SCENES["m5"]=[
 ("S","And randomised quicksort. A random pivot makes the expected time n log n on every input, because the randomness lives in the pivot, not in the data."),
 ("N","Twist number five. Collisions arrive early. That is why hash tables resize, and why random pivots save quicksort."),
 ]
+
+SCENES["mb"]=[
+("N","Down in the basement, numbers wear different costumes. The costume is called the base."),
+("R","Why does a computer count in twos?"),
+("S","Because a switch has two states, on and off. In base two, each position is worth twice the one on its right: one, two, four, eight, sixteen. So forty five is thirty two, plus eight, plus four, plus one. That is one zero one one zero one."),
+("S","To convert by hand, divide by two again and again and collect the remainders. Forty five gives one, zero, one, one, zero, one. Read them from the bottom up."),
+("R","And hexadecimal?"),
+("S","Group the bits in fours. One zero one one, then zero one one one, is B seven. That is one hundred eighty three. Octal groups the bits in threes. Hex and octal are just compact binary."),
+("S","Adding in binary follows the school carry rule. One one zero one plus one carries to one one one zero. Negative numbers use two's complement: flip the bits and add one. Minus five, in eight bits, is one one one one one zero one one."),
+("N","Bonus twist. Zero point one has no finite binary form, so zero point one plus zero point two is not exactly zero point three."),
+]

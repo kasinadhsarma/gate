@@ -431,7 +431,31 @@ def d_m5(d,t,sc):
             ctext(d,(80,225+j*62),a_,F(22),WHITE,"lm");ctext(d,(540,225+j*62),b_,F(20,False),[TEAL,GRN,PUR,GOLD,RED][j],"rm")
     if t>=ts[3]+3.5:ctext(d,(x0+wd/2,540),"300 keys, 10,000 slots → collision 98.9%",F(22),RED)
     banner(d,ts[5],t,"TWIST #5 — collisions arrive early",GOLD,115)
-SCENES=[("title",d_title,""),("m1",d_m1,"Basement · Arithmetic"),("m2",d_m2,"Basement · GCD, HCF, LCM"),("m3",d_m3,"Basement · Primes and Modular Arithmetic"),("m4",d_m4,"Basement · Counting and Probability"),("m5",d_m5,"Basement · Math inside DSA"),("s1",d_s1,"Chapter 1 · Linear Search"),("s2",d_s2,"Chapter 2 · Binary Search"),("s3",d_s3,"Chapter 3 · Merge Sort"),("s4",d_s4,"Chapter 4 · Hashing"),("s5",d_s5,"Chapter 5 · Python Memory"),("s6",d_s6,"Chapter 6 · Graphs: BFS and DFS"),("s7",d_s7,"Chapter 7 · Topological Sort"),("s8",d_s8,"Finale · Recursion and Memoisation"),("end",d_end,"")]
+
+def d_mb(d,t,sc):
+    ts=sc.ts;ctext(d,(W//2,165),"45 in base 2",F(28),WHITE)
+    bits=[0,0,1,0,1,1,0,1];wts=[128,64,32,16,8,4,2,1]
+    for i,(b,w) in enumerate(zip(bits,wts)):
+        x=250+i*98;lit=b and t>=ts[2]+0.6*i*0.4
+        rbox(d,(x,200,x+88,262),TEAL if lit else (40,46,78),(150,160,200),8,2)
+        ctext(d,(x+44,231),str(b) if t>=ts[2] else "",F(30,True,True),(10,20,30) if lit else (120,130,160))
+        ctext(d,(x+44,282),str(w),F(16),(170,180,215))
+    if t>=ts[2]+2.5:ctext(d,(W//2,312),"32 + 8 + 4 + 1 = 45",F(22),GOLD)
+    if t>=ts[3]:
+        ctext(d,(90,345),"n    n//2   n%2",F(18,True,True),(170,180,215),"lm")
+        rows=[(45,22,1),(22,11,0),(11,5,1),(5,2,1),(2,1,0),(1,0,1)]
+        for j,(a,b,c) in enumerate(rows):
+            if t>=ts[3]+0.5+j*0.9:ctext(d,(90,375+j*27),f"{a:<4} {b:<5} {c}",F(20,True,True),[TEAL,GRN][j%2],"lm")
+        if t>=ts[3]+6:ctext(d,(90,540-6),"read up: 101101",F(20,True,True),GOLD,"lm")
+    if t>=ts[5]:
+        ctext(d,(560,345),"group bits in fours",F(20),GOLD,"lm")
+        ctext(d,(560,385),"1011  0111",F(30,True,True),WHITE,"lm");ctext(d,(560,428),"  B     7   = 183",F(26,True,True),TEAL,"lm")
+        ctext(d,(560,470),"13 = 1101₂ = 15₈ = D₁₆",F(20,True,True),GRN,"lm")
+    if t>=ts[6]:
+        ctext(d,(900,345),"binary add:  1101 + 1 = 1110",F(18,True,True),PUR,"lm")
+        ctext(d,(900,385),"two's complement of 5:",F(18),GOLD,"lm");ctext(d,(900,420),"00000101 → flip → 11111010",F(16,True,True),WHITE,"lm");ctext(d,(900,450),"+1 → 11111011  (= −5)",F(18,True,True),RED,"lm")
+    banner(d,ts[7],t,"BONUS TWIST — 0.1 has no finite binary form",RED,115)
+SCENES=[("title",d_title,""),("m1",d_m1,"Basement · Arithmetic"),("mb",d_mb,"Basement · Number Bases"),("m2",d_m2,"Basement · GCD, HCF, LCM"),("m3",d_m3,"Basement · Primes and Modular Arithmetic"),("m4",d_m4,"Basement · Counting and Probability"),("m5",d_m5,"Basement · Math inside DSA"),("s1",d_s1,"Chapter 1 · Linear Search"),("s2",d_s2,"Chapter 2 · Binary Search"),("s3",d_s3,"Chapter 3 · Merge Sort"),("s4",d_s4,"Chapter 4 · Hashing"),("s5",d_s5,"Chapter 5 · Python Memory"),("s6",d_s6,"Chapter 6 · Graphs: BFS and DFS"),("s7",d_s7,"Chapter 7 · Topological Sort"),("s8",d_s8,"Finale · Recursion and Memoisation"),("end",d_end,"")]
 def render(key,out):
     sc=Sc(key);fn=[x for x in SCENES if x[0]==key][0]
     n=int(sc.dur*FPS)
