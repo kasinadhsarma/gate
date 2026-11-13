@@ -1,0 +1,7 @@
+flowchart LR
+  P["Python object model"] --> I["Immutable: int, float, str, tuple, frozenset"]
+  P --> M["Mutable: list, dict, set, deque"]
+  I --> I1["x = x + 1 makes a NEW object"]
+  M --> M1["lst.append changes the SAME object"]
+  M1 --> T["Aliasing: b = a shares one list"]
+  M1 --> W["Default argument list is created ONCE"]

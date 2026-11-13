@@ -1,0 +1,8 @@
+flowchart TD
+  A["Problem statement"] --> B{"Constraints n?"}
+  B -->|"n up to 20"| C["Brute force / backtracking"]
+  B -->|"n up to 10^3"| D["O(n^2) is fine"]
+  B -->|"n up to 10^5"| E["Need O(n log n)"]
+  B -->|"n up to 10^6+"| F["Need O(n) / O(1)"]
+  E --> G["Sort / heap / binary search / divide and conquer"]
+  F --> H["Hash map / two pointers / prefix sums"]

@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Main
+  participant f4 as fib(4)
+  participant f3 as fib(3)
+  participant f2 as fib(2)
+  Main->>f4: call
+  f4->>f3: call
+  f3->>f2: call
+  f2-->>f3: 1
+  f3-->>f4: 2
+  f4-->>Main: 3
