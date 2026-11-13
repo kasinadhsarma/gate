@@ -12,6 +12,10 @@ Each syllabus section is a LaTeX-built PDF told through two friends, Ramu (asks 
 | 6 | Machine Learning | [pdf](6-machine-learning/GATE_DA_2027_Machine_Learning_Ramu_Somu.pdf) |
 | 7 | Artificial Intelligence | [pdf](7-artificial-intelligence/GATE_DA_2027_Artificial_Intelligence_Ramu_Somu.pdf) |
 
+### Films
+
+| | Film | File |
+|---|------|------|
 | 🎬 | Math + Python + DSA story film (16.7 min: arithmetic, number bases, GCD/LCM, primes, probability, Python workshop, DSA) | [mp4](film/Operation_Gate_The_Night_Library_Math_Python_DSA_Film.mp4) |
 | 🎬 | Probability & Statistics film (12.6 min, 9 twists + Python lab, DSA lab, line-by-line code walkthrough) | [mp4](1-probability-statistics/film/Operation_Gate_Probability_Statistics_Casino_of_Chance.mp4) |
 | 🎬 | Linear Algebra film (14.3 min, 8 twists + Python lab, DSA complexity lab, walkthrough) | [mp4](2-linear-algebra/film/Operation_Gate_Linear_Algebra_Tower_of_Vectors_v3.mp4) |
@@ -21,8 +25,13 @@ Each syllabus section is a LaTeX-built PDF told through two friends, Ramu (asks 
 | 🎬 | Machine Learning film (12 min: regression, classification, trees, SVM, neural nets, bias-variance/CV, clustering, PCA) | [mp4](6-machine-learning/film/Operation_Gate_Machine_Learning_Learning_Machine.mp4) |
 | 🎬 | Artificial Intelligence film (7.1 min: search, logic, Bayesian networks, sampling) | [mp4](7-artificial-intelligence/film/Operation_Gate_Artificial_Intelligence_Thinking_Machine.mp4) |
 | 🎬 | Part 2 films that finish the syllabus: [DSA](4-programming-dsa/film/Operation_Gate_DSA_Part2_Data_Structure_Workshop.mp4), [Statistics](1-probability-statistics/film/Operation_Gate_Statistics_Clinic_Summary_Correlation_t_test.mp4), [DBMS](5-dbms-warehousing/film/Operation_Gate_DBMS_Part2_Relational_Algebra.mp4), [ML](6-machine-learning/film/Operation_Gate_ML_Part2_Clustering_LDA_Regression.mp4), [AI](7-artificial-intelligence/film/Operation_Gate_AI_Part2_Iterative_Deepening_dSeparation.mp4) | |
-| 📋 | [Video watch order (xlsx)](study-plan/GATE_DA_2027_Video_Watch_Order.xlsx) and [missing-topics addendum PDF](study-plan/GATE_DA_2027_Missing_Topics_Addendum.pdf) | |
-| 🎓 | [Later Learning films and out-of-syllabus handbook](later-learning/README.md) - 37 films beyond the syllabus | |
+
+### Plan and extras
+
+| | What | Where |
+|---|------|-------|
+| 📋 | Video watch order (xlsx, with a Later Learning Films tab) and missing-topics addendum PDF | [study-plan](study-plan/) |
+| 🎓 | 37 Later Learning films and a 77-page out-of-syllabus handbook PDF | [later-learning](later-learning/README.md) |
 | 🛠 | Shared film tooling (visual helpers, line tracer, build driver, commented lab code) | [shared-film-tools](shared-film-tools/) |
 
 Each folder also has the `.tex` source (`latexmk -pdf file.tex`). `archive/earlier-editions` holds superseded versions. `4-programming-dsa/verification` has the scripts used to check every answer. Past-question stems are paraphrased from the official papers; answers match the official keys.

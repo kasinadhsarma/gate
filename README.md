@@ -1,124 +1,42 @@
-# GATE 2026 - Computer Science Preparation
+# Operation Gate: GATE DA 2027 (Data Science & AI)
 
-> **Target**: GATE 2026 | **Focus**: Data Structures & Algorithms + Full CS Syllabus
+Preparation material for the **GATE 2027 Data Science & AI (DA)** paper (February 2027), plus an
+out-of-syllabus set for learning after the exam.
 
-## 📊 Quick Stats
+Every topic is told through two friends: **Ramu** asks "why?" and **Somu** explains with everyday examples.
+Each topic comes as a LaTeX-built PDF and as a narrated, animated film whose Python code was run, so the
+output on screen is the real output.
 
-- **DSA Weightage**: 16-18 marks (15-20% of paper)
-- **Preparation Timeline**: Nov 2024 - Feb 2026
-- **Topics Covered**: 13 Core DSA Topics + Full CS Syllabus
+## What is here
 
-## 🎯 Study Plan Overview
+| Part | What | Where |
+|------|------|-------|
+| Syllabus PDFs | 7 sections (probability and statistics, linear algebra, calculus and optimisation, programming and DSA, DBMS and warehousing, machine learning, AI) with past GATE DA questions 2024-2026 solved | [da-2027](da-2027/README.md) |
+| Syllabus films | 13 core films in watch order, covering every syllabus section | [da-2027](da-2027/README.md) |
+| Study plan | Video watch-order spreadsheet and the missing-topics addendum PDF | [da-2027/study-plan](da-2027/study-plan/) |
+| Later Learning | 37 films and a 77-page handbook PDF beyond the syllabus | [da-2027/later-learning](da-2027/later-learning/README.md) |
+| Film tooling | Drawing helpers, line tracer, build driver, commented lab code | [da-2027/shared-film-tools](da-2027/shared-film-tools/) |
 
-### Phase 1: Foundation (Nov 2024 - Apr 2025)
-- Complete all 13 DSA topics
-- Solve topic-wise previous year questions
-- Build strong conceptual foundation
+## Later Learning topics (beyond GATE)
 
-### Phase 2: Integration (May 2025 - Aug 2025)
-- Mixed topic problem solving
-- Full-length mock tests
-- Identify and strengthen weak areas
+Advanced DSA (range queries, balanced trees, graphs, flow, advanced DP, strings, number theory), deep learning,
+transformers and LLMs, NLP and retrieval, reinforcement learning, generative models, geometric deep learning,
+optimisation, Bayesian methods, causality and game theory, state space models, boosting and kernels,
+advanced linear algebra, probability, statistics, calculus optimisation, MLOps, data engineering, system design,
+ML security, neuromorphic computing, and LeetCode patterns (hashing, windows, trees, graphs, DP, backtracking).
 
-### Phase 3: Mastery (Sep 2025 - Feb 2026)
-- Previous year papers (2015-2025)
-- Advanced problem solving
-- Speed and accuracy optimization
+## How to use it
 
-## 📚 DSA Topics (Priority Order)
+1. Watch the 13 core films in the order of the watch-order spreadsheet.
+2. Read the matching section PDF and solve its past questions.
+3. After the exam, work through the Later Learning films, then use the handbook to practise the code.
 
-| # | Topic | Weightage | Directory |
-|---|-------|-----------|-----------|
-| 1 | Arrays & Strings | High | [01-arrays-strings](dsa/01-arrays-strings/) |
-| 2 | Linked Lists | Medium | [02-linked-lists](dsa/02-linked-lists/) |
-| 3 | Stacks & Queues | Medium | [03-stacks-queues](dsa/03-stacks-queues/) |
-| 4 | Trees | High | [04-trees](dsa/04-trees/) |
-| 5 | Graphs | High | [05-graphs](dsa/05-graphs/) |
-| 6 | Hashing | Medium | [06-hashing](dsa/06-hashing/) |
-| 7 | Sorting & Searching | High | [07-sorting-searching](dsa/07-sorting-searching/) |
-| 8 | Recursion | Medium | [08-recursion](dsa/08-recursion/) |
-| 9 | Divide & Conquer | Medium | [09-divide-conquer](dsa/09-divide-conquer/) |
-| 10 | Greedy Algorithms | High | [10-greedy](dsa/10-greedy/) |
-| 11 | Dynamic Programming | Very High | [11-dynamic-programming](dsa/11-dynamic-programming/) |
-| 12 | Backtracking | Medium | [12-backtracking](dsa/12-backtracking/) |
-| 13 | Complexity Analysis | Very High | [13-complexity-analysis](dsa/13-complexity-analysis/) |
+## Rebuilding
 
-## 📁 Repository Structure
-
-```
-gate/
-├── dsa/                    # Topic-wise DSA practice
-├── previous-years/         # GATE papers 2015-2025
-├── progress/              # Track your preparation
-├── templates/             # Code templates
-├── resources/             # Study materials
-└── c/                     # C programming practice
-```
-
-## 🎓 Key Focus Areas
-
-### Must Master
-- **Time & Space Complexity**: Big-O, Theta, Omega notation
-- **Dynamic Programming**: Memoization, Tabulation, Classic problems
-- **Graph Algorithms**: BFS, DFS, Dijkstra, MST
-- **Tree Traversals**: Inorder, Preorder, Postorder, Level-order
-- **Sorting**: Quick, Merge, Heap sort with complexity analysis
-
-### Important Patterns
-- Two Pointer technique
-- Sliding Window
-- Recursion + Backtracking
-- Greedy choice property
-- Optimal substructure
-
-## 📖 Resources
-
-### Standard Books
-- **Algorithms**: Cormen (CLRS) - Introduction to Algorithms
-- **Data Structures**: Tanenbaum, Horowitz & Sahni
-- **C Programming**: Dennis Ritchie - The C Programming Language
-
-### Online Resources
-- GeeksforGeeks GATE Section
-- GATE Overflow (Previous Year Questions)
-- GateBook (Topic-wise practice)
-
-## 📈 Progress Tracking
-
-Track your daily progress in [progress/tracker.md](progress/tracker.md)
-
-### Weekly Goals
-- [ ] Complete 1 major topic per week
-- [ ] Solve 20+ previous year questions
-- [ ] Review and revise weak areas
-- [ ] Take 1 topic-wise mock test
-
-## 🔥 Daily Routine
-
-1. **Morning (2 hours)**: Theory + Concept building
-2. **Afternoon (2 hours)**: Problem solving + Coding
-3. **Evening (1 hour)**: Previous year questions
-4. **Night (30 mins)**: Revision + Notes
-
-## 💡 Tips for Success
-
-1. **Understand, Don't Memorize**: Focus on why algorithms work
-2. **Code Everything**: Implement algorithms from scratch
-3. **Analyze Complexity**: Always calculate time/space complexity
-4. **Practice Mixed Questions**: GATE loves combining topics
-5. **Review Regularly**: Spaced repetition is key
-
-## 🎯 Target Score
-
-- **Minimum**: 55/100 (Good rank)
-- **Target**: 65/100 (Excellent rank)
-- **Dream**: 75+/100 (Top rank)
+PDFs: `latexmk -pdf file.tex` in each folder. Handbook: `xelatex` on
+[the handbook source](da-2027/later-learning/handbook/Operation_Gate_OutOfSyllabus_Handbook.tex).
+Films are built from the scripts in each film's `source` folder with the shared tooling.
 
 ---
 
-**Last Updated**: November 22, 2024  
-**Next Review**: Weekly updates in progress tracker
-
-
-## GATE DA 2027 study material
-See [da-2027/](da-2027/README.md) for the Data Science & AI paper PDFs (LaTeX sources, past questions 2024-2026, Mermaid maps).
+Older notes from the first GATE 2026 plan are kept in [operationgate.md](operationgate.md).
