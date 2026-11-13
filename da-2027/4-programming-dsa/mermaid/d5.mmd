@@ -1,0 +1,8 @@
+flowchart TD
+  R["mergeSort(arr)"] --> S{"len <= 1 ?"}
+  S -->|"yes"| Z["return arr"]
+  S -->|"no"| L["mergeSort(left half)"]
+  S -->|"no"| Rr["mergeSort(right half)"]
+  L --> M["merge two sorted halves, O(n)"]
+  Rr --> M
+  M --> O["return sorted array"]

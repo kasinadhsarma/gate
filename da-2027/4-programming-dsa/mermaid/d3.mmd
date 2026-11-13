@@ -1,0 +1,9 @@
+flowchart TD
+  S["Which data structure?"] --> Q1{"Need order of arrival?"}
+  Q1 -->|"last in first out"| ST["Stack (list)"]
+  Q1 -->|"first in first out"| QU["Queue (deque)"]
+  Q1 -->|"no"| Q2{"Need fast lookup by key?"}
+  Q2 -->|"yes"| HM["Hash table: dict / set  O(1) avg"]
+  Q2 -->|"no"| Q3{"Need min or max repeatedly?"}
+  Q3 -->|"yes"| HP["Heap: O(log n) push/pop"]
+  Q3 -->|"sorted order + range queries"| BS["BST / balanced tree"]

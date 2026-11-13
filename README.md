@@ -118,3 +118,7 @@ Track your daily progress in [progress/tracker.md](progress/tracker.md)
 
 **Last Updated**: November 22, 2024  
 **Next Review**: Weekly updates in progress tracker
+
+
+## GATE DA 2027 study material
+See [da-2027/](da-2027/README.md) for the Data Science & AI paper PDFs (LaTeX sources, past questions 2024-2026, Mermaid maps).

@@ -1,0 +1,10 @@
+flowchart LR
+  A["Google-style problem"] --> B{"Pattern?"}
+  B -->|"pair / triple in sorted data"| P1["Two pointers"]
+  B -->|"best window of size k"| P2["Sliding window"]
+  B -->|"have I seen this before"| P3["Hash set / map"]
+  B -->|"sum of a range"| P4["Prefix sums"]
+  B -->|"min x such that ok(x)"| P5["Binary search on answer"]
+  B -->|"next greater element"| P6["Monotonic stack"]
+  B -->|"shortest path unweighted"| P7["BFS on grid or graph"]
+  B -->|"top k"| P8["Heap"]

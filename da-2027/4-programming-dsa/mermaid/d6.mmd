@@ -1,0 +1,10 @@
+flowchart TD
+  A["Start BFS at s, dist[s]=0, queue=[s]"] --> B{"queue empty?"}
+  B -->|"no"| C["u = pop front"]
+  C --> D["for each neighbour v of u"]
+  D --> E{"v unvisited?"}
+  E -->|"yes"| F["dist[v]=dist[u]+1, push v"]
+  E -->|"no"| D
+  F --> D
+  D --> B
+  B -->|"yes"| G["done: dist = fewest edges"]

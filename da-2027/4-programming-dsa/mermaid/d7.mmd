@@ -1,0 +1,11 @@
+flowchart TD
+  A["DFS(u)"] --> B["mark u GRAY (on stack)"]
+  B --> C["for each neighbour v"]
+  C --> D{"colour of v?"}
+  D -->|"WHITE"| E["tree edge: DFS(v)"]
+  D -->|"GRAY"| F["BACK edge: cycle found"]
+  D -->|"BLACK"| G["forward / cross edge"]
+  E --> C
+  F --> C
+  G --> C
+  C --> H["mark u BLACK, append to finish order"]
